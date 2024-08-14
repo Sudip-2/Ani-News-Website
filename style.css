@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar starts here */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* outline: 2px solid; */
+    padding: 15px 0px;
+    background-color: rgb(0, 217, 255);
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    box-shadow: 0 0 1px black;
+    z-index: 1;
+}
+
+#headingimg {
+    display: flex;
+    align-items: center;
+}
+
+#headingimg img {
+    height: 45px;
+    margin-right: 8px;
+}
+
+.navbars {
+    display: flex;
+    gap: 20px;
+}
+
+.navClassTwo.hidden {
+    right: -450px;
+}
+
+.navContainer ul li {
+    list-style: none;
+}
+
+.navContainer ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.navContainer ul li a:hover {
+    color: blue;
+}
+
+.searchbox {
+    position: relative;
+}
+
+.searchbox input {
+    height: 28px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: transparent;
+    border: rgb(110, 187, 255);
+}
+
+.searchbox button {
+    height: 28px;
+    width: 70px;
+    border-radius: 15px;
+    border: 1px rgb(110, 187, 255) solid;
+    cursor: pointer;
+}
+
+.searchbox button:hover {
+    background-color: rgb(33, 148, 248);
+    color: white;
+}
+
+.search-icon {
+    height: 20px;
+    position: absolute;
+    left: 20px;
+    top: -9px;
+    cursor: pointer;
+    display: none;
+}
+
+.spanForNav {
+    flex-direction: column;
+    gap: 3px;
+    cursor: pointer;
+    display: none;
+}
+
+.spanForNav span {
+    height: 5px;
+    width: 30px;
+    background-color: rgb(0, 102, 255);
+    border-radius: 10px;
+}
+
+/* Navbar ends here */
+
+/* Main section starts here */
+main {
+    margin-top: 50px;
+    /* outline: 2px solid; */
+}
+
+.cardsContainer {
+    /* outline: 2px solid; */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+
+.cardHeader img {
+    object-fit: cover;
+    width: 100%;
+    height: 190px;
+}
+
+.card {
+    width: 360px;
+    min-height: 400px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0 1px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform 1s ;
+}
+
+.card:hover{
+    transform: scale(1.02);
+}
+
+.news-title {
+    margin-top: 25px;
+    padding: 0px 10px;
+}
+
+.publisherName {
+    margin-top: 15px;
+    padding: 0px 10px;
+}
+
+.newsDesc {
+    margin-top: 15px;
+    padding: 0px 10px;
+}
+
+/* Main section ends here */
+
+/* Responsiveness Starts from here */
+@media screen and (max-width:500px) {
+    .navClassOne {
+        display: none;
+    }
+
+    .spanForNav {
+        display: flex;
+    }
+
+    .searchbox button {
+        display: none;
+    }
+
+    .search-icon {
+        display: flex;
+    }
+
+    .navbars {
+        position: fixed;
+        background-color: rgba(33, 148, 248, .5);
+        right: -450px;
+        top: 75px;
+        height: 100vh;
+        width: 100%;
+        max-width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 2rem;
+        gap: 30px;
+        padding-top: 30px;
+        transition: right 1s ease;
+    }
+
+    .navbars.active{
+        right: 0;
+    }
+
+    .searchinputbox{
+        top: 50%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-65%,0%);
+        border: 1px solid;
+        z-index: -1;
+        padding: 15px;
+    }
+    .searchinputbox.active{
+        transform: translate(-65%,130%);
+        border: 1px solid;
+    }
+}

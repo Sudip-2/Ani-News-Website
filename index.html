@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniNews</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/Logo.webp" type="webp">
+</head>
+
+<body>
+    <nav>
+        <div class="navContainer">
+            <div id="headingimg">
+                <img src="./images/Logo.webp" alt="main logo image">
+                <h1 class="headingMain">AniNews</h1>
+            </div>
+            <ul class="navbars navClassOne">
+                <li id="current">Current</li>
+                <li id="previous">Previous</li>
+            </ul>
+            <div class="searchbox">
+                <input type="text" placeholder="e.g. demon slayer" class="searchinputbox">
+                <img src="./images/search.png" alt="search icon" class="search-icon">
+                <button id="search-btn">Search </button>
+            </div>
+            <div class="spanForNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+    </nav>
+
+    <main>
+        <div class="cardsContainer">
+
+        </div>
+
+        <template id="newsCard">
+            <div class="card">
+                <div class="cardHeader">
+                    <img src="https://via.placeholder.com/400x200" alt="" id="cardImg">
+                </div>
+                <div class="cardContent">
+                    <h3 class="news-title">This is title</h3>
+                    <h6 class="publisherName">End Gadget 26/08/2023</h6>
+                    <p class="newsDesc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus totam ipsam
+                        sed beatae excepturi nemo repellat ex ea adipisci recusandae!</p>
+                </div>
+            </div>
+        </template>
+    </main>
+
+    <footer>
+        <div class="footerContainer">
+
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
