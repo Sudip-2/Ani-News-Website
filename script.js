@@ -3,10 +3,10 @@ const apiKey = "c397f3198da24019b75d69a30008438c"
 const url = 'https://newsapi.org/v2/everything?q='
 
 window.addEventListener('load', () => {
-    fetchNews("Anime", "2024-07-11", "2024-07-11")
+    fetchNews("Anime")
 })
-async function fetchNews(query, date, date2) {
-    let response = await fetch(`${url}${query}&from=${date}&to=${date2}&apiKey=${apiKey}`)
+async function fetchNews(query) {
+    let response = await fetch(`${url}${query}&apiKey=${apiKey}`)
     const data = await response.json()
     bindData(data.articles)
 }
@@ -50,19 +50,19 @@ searchicon.addEventListener('click',() => {
     fetchNews(searchContent)
 })
 // Current upcoming Previous
-let current = document.querySelector('#current')
-let previous = document.querySelector('#previous')
+let current = document.querySelector('.anime')
+let previous = document.querySelector('.manga')
 current.style.color = "blue"
 
 current.addEventListener('click', () => {
     current.style.color = "blue"
     previous.style.color = "black"
-    fetchNews("Anime", "2024-07-11", "2024-07-11")
+    fetchNews("Anime")
 })
 previous.addEventListener('click', () => {
     previous.style.color = "blue"
     current.style.color = "black"
-    fetchNews("Anime", "2024-07-11", "2020-07-08")
+    fetchNews("Manga")
 })
 
 //Hammenu
